@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN" />
+  <meta property="og:title" content="PhySPRING" />
+  <meta property="og:description" content="Structure-Preserving Reduction of Physics-Informed Twins via GNN" />
+  <meta property="og:type" content="website" />
+  <title>PhySPRING — Structure-Preserving Reduction of Physics-Informed Twins via GNN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="PhySPRING home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>PhySPRING</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#robotics">Real2Sim</a>
+        <a href="#citation">Citation</a>
+      </nav>
+      <a class="paper-link" href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">Paper ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-grid page-width">
+        <div class="hero-copy">
+          <div class="eyebrow">ARXIV · 2026</div>
+          <h1><span class="accent">PhySPRING</span>: Structure-Preserving Reduction of Physics-Informed Twins via GNN</h1>
+          <p class="dek">A differentiable GNN framework that learns reduced spring–mass digital twins while preserving explicit physical structure for efficient simulation and downstream robot evaluation.</p>
+
+          <div class="authors" aria-label="Authors">
+            <span>Yixiong Jing<sup>*†</sup></span>
+            <span>Xingyuan Chen<sup>*</sup></span>
+            <span>Guangming Wang<sup>†</sup></span>
+            <span>Olaf Wysocki</span>
+            <span>Haibing Wu</span>
+            <span>Brian Sheil</span>
+          </div>
+          <div class="affiliations">
+            <span>University of Cambridge</span>
+            <span>Shanghai Jiao Tong University</span>
+          </div>
+          <div class="footnote">* Equal contribution &nbsp;&nbsp; † Corresponding author</div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">Paper</a>
+            <a class="btn btn-secondary" href="https://arxiv.org/pdf/2605.07687" target="_blank" rel="noreferrer">PDF</a>
+            <span class="btn btn-disabled" aria-disabled="true" title="Code link will be added later">Code · Coming soon</span>
+          </div>
+        </div>
+
+        <div class="hero-media media-placeholder tall" role="img" aria-label="Placeholder for PhySPRING teaser video or image">
+          <div class="placeholder-topline">TEASER · PLACEHOLDER</div>
+          <div class="spring-illustration" aria-hidden="true">
+            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
+            <div class="edge e1"></div><div class="edge e2"></div><div class="edge e3"></div><div class="edge e4"></div><div class="edge e5"></div>
+          </div>
+          <div class="placeholder-caption">Replace with the paper teaser image or a looping result video.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement section-pad soft" id="overview">
+      <div class="page-width narrow">
+        <div class="section-index">01 · OVERVIEW</div>
+        <h2>Reduce the model, preserve the physics.</h2>
+        <p>Physics-informed digital twins are often reconstructed at the resolution needed for visual geometry, even when downstream dynamics can be represented with far fewer degrees of freedom. PhySPRING learns a hierarchy of progressively coarser graph topologies together with their mechanical parameters, keeping each level as an explicit spring–mass system rather than replacing simulation with a black-box dynamics model.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" id="method">
+      <div class="page-width">
+        <div class="section-index">02 · METHOD</div>
+        <div class="section-title-row">
+          <h2>End-to-end structure-preserving reduction</h2>
+          <p>From dense reconstruction to simulation-ready reduced-order models.</p>
+        </div>
+
+        <div class="wide-media media-placeholder" role="img" aria-label="Placeholder for PhySPRING method figure">
+          <div class="placeholder-topline">FIGURE · METHOD PLACEHOLDER</div>
+          <div class="pipeline">
+            <div class="pipe-card"><b>Dense Twin</b><span>spring–mass graph</span></div>
+            <div class="arrow">→</div>
+            <div class="pipe-card"><b>Neural-CLASP</b><span>learn assignments</span></div>
+            <div class="arrow">→</div>
+            <div class="pipe-card"><b>Galerkin</b><span>preserve structure</span></div>
+            <div class="arrow">→</div>
+            <div class="pipe-card"><b>Reduced Twin</b><span>simulation-ready</span></div>
+          </div>
+          <div class="placeholder-caption">Replace with Fig. 2 or your final method overview export.</div>
+        </div>
+
+        <div class="feature-grid three">
+          <article class="feature-card">
+            <div class="feature-tag">A · TOPOLOGY</div>
+            <h3>Learned graph coarsening</h3>
+            <p>A hierarchical GNN learns discrete node assignments from geometric, topological, and dynamic features.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-tag">B · PHYSICS</div>
+            <h3>Explicit physical form</h3>
+            <p>Galerkin projection carries the system matrices across scales so each reduced model remains a spring–mass system.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-tag">C · OPTIMIZATION</div>
+            <h3>Observation-supervised</h3>
+            <p>Topology and mechanical parameters are trained through differentiable forward rollouts against observed motion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad dark" id="results">
+      <div class="page-width">
+        <div class="section-index light-index">03 · RESULTS</div>
+        <div class="section-title-row light-copy">
+          <h2>Faster rollouts with stable physical and visual fidelity</h2>
+          <p>On the PhysTwin benchmark, the reduced hierarchy maintains useful dynamics while lowering simulation cost.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><strong>2.30×</strong><span>up to simulation speed-up</span></div>
+          <div class="stat"><strong>3</strong><span>learned reduction levels in the paper</span></div>
+          <div class="stat"><strong>Explicit</strong><span>spring–mass structure at every level</span></div>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="media-placeholder dark-placeholder" role="img" aria-label="Placeholder for reconstruction comparison">
+            <div class="placeholder-topline">QUALITATIVE RESULT · PLACEHOLDER</div>
+            <div class="ghost-bars"><span></span><span></span><span></span><span></span></div>
+            <div class="placeholder-caption">Insert reconstruction and re-simulation comparison.</div>
+          </div>
+          <div class="media-placeholder dark-placeholder" role="img" aria-label="Placeholder for prediction comparison">
+            <div class="placeholder-topline">PREDICTION RESULT · PLACEHOLDER</div>
+            <div class="ghost-bars"><span></span><span></span><span></span><span></span></div>
+            <div class="placeholder-caption">Insert multi-level prediction visualization or video.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="robotics">
+      <div class="page-width">
+        <div class="section-index">04 · REAL2SIM</div>
+        <div class="section-title-row">
+          <h2>Reduced twins stay useful inside the robot loop</h2>
+          <p>The learned reduced models can be substituted into downstream robot policy evaluation without retraining the policies.</p>
+        </div>
+
+        <div class="robot-grid">
+          <div class="media-placeholder robot-placeholder" role="img" aria-label="Placeholder for Real2Sim robot evaluation video">
+            <div class="placeholder-topline">ROBOT VIDEO · PLACEHOLDER</div>
+            <div class="robot-arm" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="placeholder-caption">Replace with ACT / π₀ manipulation evaluation clips.</div>
+          </div>
+          <div class="robot-copy">
+            <h3>Zero-shot deployment of the reduced physical model</h3>
+            <p>PhySPRING preserves the mechanical representation needed by external simulators, so reduced twins can be used directly for unseen manipulations and repeated action rollouts.</p>
+            <div class="mini-fact"><span>ACT &amp; π₀</span><p>Policy evaluation across reduction levels</p></div>
+            <div class="mini-fact"><span>1.23×</span><p>up to action-sampling throughput improvement reported in the paper</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad soft" id="abstract">
+      <div class="page-width narrow">
+        <div class="section-index">05 · ABSTRACT</div>
+        <h2>Physics-informed model order reduction for deformable digital twins</h2>
+        <p>PhySPRING addresses the mismatch between visually dense reconstruction and the lower physical complexity needed for task-relevant dynamics. The method learns a hierarchy of coarsened graph topologies and mechanical parameters with a differentiable GNN, while preserving each level as an explicit spring–mass system. Experiments on PhysTwin show improved dense reconstruction and prediction, stable fidelity across reduced models, and faster simulation. The reduced models are further evaluated in a Real2Sim robot policy pipeline, where they preserve manipulation utility while improving action-sampling efficiency.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" id="citation">
+      <div class="page-width narrow">
+        <div class="section-index">06 · CITATION</div>
+        <h2>How to cite</h2>
+        <div class="citation-box">
+<pre id="bibtex">@misc{jing2026physpring,
+  title  = {PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN},
+  author = {Yixiong Jing and Xingyuan Chen and Guangming Wang and Olaf Wysocki and Haibing Wu and Brian Sheil},
+  year   = {2026},
+  eprint = {2605.07687},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO}
+}</pre>
+          <button id="copyBib" class="copy-btn" type="button">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page-width footer-inner">
+      <div><strong>PhySPRING</strong><br><span>Structure-Preserving Reduction of Physics-Informed Twins via GNN</span></div>
+      <div class="footer-links">
+        <a href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">arXiv</a>
+        <span>Code coming soon</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
