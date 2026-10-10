@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="110" viewBox="0 0 420 110" role="img" aria-label="Shanghai Jiao Tong University">
+  <rect width="420" height="110" rx="16" fill="#ffffff"/>
+  <circle cx="58" cy="55" r="38" fill="none" stroke="#B5121B" stroke-width="8"/>
+  <circle cx="58" cy="55" r="21" fill="none" stroke="#B5121B" stroke-width="5"/>
+  <path d="M58 24v62M27 55h62" stroke="#B5121B" stroke-width="5"/>
+  <text x="112" y="45" font-size="21" font-family="Georgia, serif" font-weight="700" fill="#B5121B">上海交通大学</text>
+  <text x="112" y="73" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#111111">SHANGHAI JIAO TONG UNIVERSITY</text>
+</svg>

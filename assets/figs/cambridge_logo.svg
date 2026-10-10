@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="110" viewBox="0 0 420 110" role="img" aria-label="University of Cambridge">
+  <rect width="420" height="110" rx="16" fill="#ffffff"/>
+  <rect x="14" y="14" width="82" height="82" rx="14" fill="#7F1734"/>
+  <path d="M31 29h48v52H31z" fill="#D6A84A" opacity="0.95"/>
+  <path d="M31 55h48" stroke="#7F1734" stroke-width="6"/>
+  <path d="M55 29v52" stroke="#7F1734" stroke-width="6"/>
+  <text x="112" y="48" font-size="17" font-family="Inter, Arial, sans-serif" font-weight="700" fill="#111111">UNIVERSITY OF</text>
+  <text x="112" y="76" font-size="31" font-family="Georgia, serif" font-weight="700" fill="#111111">Cambridge</text>
+</svg>

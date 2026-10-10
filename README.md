@@ -1,44 +1,82 @@
 # PhySPRING Project Page
 
-Static research project page inspired by the visual structure of the Deform360 project website, adapted for:
+Static project page for **PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN**.
 
-**PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN**
+This version has been updated to:
+- show **NeurIPS 2026 · Poster** in the hero section,
+- mark **Guangming Wang** as the only corresponding author,
+- include **University of Cambridge** and **Shanghai Jiao Tong University** logo cards,
+- reserve a dedicated placeholder for the **CV4DT** logo.
 
-Paper: https://arxiv.org/abs/2605.07687
+## Structure
 
-## Files
-
-- `index.html` — page content
-- `style.css` — all styling
-- `script.js` — BibTeX copy button
-- `assets/` — put final figures, videos, logos, or thumbnails here
-
-## Replace placeholders
-
-The current page intentionally contains CSS placeholders instead of paper figures/videos. Recommended replacements:
-
-1. Hero teaser: replace `.hero-media` content with `<video>` or `<img>`.
-2. Method overview: replace the method placeholder with the final method figure.
-3. Qualitative results: add reconstruction/re-simulation and prediction videos.
-4. Real2Sim: add ACT / pi0 manipulation evaluation clips.
-5. Code button: replace the disabled span with an `<a>` when the repository is public.
-
-Example video:
-
-```html
-<video autoplay muted loop playsinline controls>
-  <source src="assets/teaser.mp4" type="video/mp4">
-</video>
+```text
+physpring_project_page_v2/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    ├── cambridge_logo.svg
+    ├── sjtu_logo.svg
+    └── cv4dt_placeholder.svg
 ```
 
-## GitHub Pages deployment
+## Run locally
 
-1. Create a new GitHub repository, for example `physpring`.
-2. Upload the contents of this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`.
-6. Save. GitHub will publish the project page at a URL similar to:
-   `https://YOUR_USERNAME.github.io/physpring/`
+```bash
+python -m http.server 8000
+```
 
-No backend server is needed.
+Then open:
+
+```text
+http://localhost:8000
+```
+
+## Deploy to GitHub Pages
+
+1. Create a new repository, for example: `physpring-project-page`
+2. Upload all files in this folder to the repository root.
+3. In GitHub, go to:
+
+```text
+Settings → Pages
+```
+
+4. Choose:
+
+```text
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
+```
+
+5. Save, then wait for GitHub Pages to build.
+
+Your site will normally appear at:
+
+```text
+https://YOUR_USERNAME.github.io/physpring-project-page/
+```
+
+## Replacing the logo placeholder
+
+When you have the final CV4DT logo, replace this file:
+
+```text
+assets/cv4dt_placeholder.svg
+```
+
+You do not need to change the HTML unless you want a different size or spacing.
+
+## Replacing media placeholders
+
+The current page still uses placeholder blocks for:
+- teaser image or video,
+- method figure,
+- qualitative results,
+- prediction results,
+- Real2Sim robot clips.
+
+Later, you can replace them with real images or videos by editing `index.html`.

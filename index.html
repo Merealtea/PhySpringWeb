@@ -8,7 +8,171 @@
   <meta property="og:description" content="Structure-Preserving Reduction of Physics-Informed Twins via GNN" />
   <meta property="og:type" content="website" />
   <title>PhySPRING — Structure-Preserving Reduction of Physics-Informed Twins via GNN</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_v8.css" />
+
+  <style>
+    /* v8 critical layout overrides */
+    #method .method-figure {
+      width: min(100%, 980px) !important;
+      max-width: 980px !important;
+      margin: 28px auto 26px !important;
+      overflow: hidden !important;
+    }
+
+    #method .method-figure > img {
+      display: block !important;
+      width: 100% !important;
+      max-width: 980px !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      margin: 0 auto !important;
+    }
+
+    .four-video-scroll {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+    }
+
+    .four-video-grid {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      gap: 12px !important;
+    }
+
+    .four-video-grid > .video-panel {
+      flex: 1 1 0 !important;
+      width: calc((100% - 36px) / 4) !important;
+      max-width: calc((100% - 36px) / 4) !important;
+      min-width: 0 !important;
+    }
+
+    .video-panel .video-title {
+      min-height: 42px !important;
+      margin: 0 0 8px !important;
+      text-align: center !important;
+    }
+
+    .video-panel video {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 10 !important;
+      object-fit: cover !important;
+    }
+
+    .research-figure:not(.method-figure) {
+      width: min(100%, 1080px) !important;
+      max-width: 1080px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      overflow: hidden !important;
+    }
+
+    .research-figure:not(.method-figure) > img {
+      display: block !important;
+      width: 100% !important;
+      max-width: 1080px !important;
+      height: auto !important;
+      object-fit: contain !important;
+      margin: 0 auto !important;
+    }
+
+    .logo-row {
+      width: min(820px, 100%);
+      margin: 24px auto 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 54px;
+    }
+
+    .logo-card {
+      width: 220px;
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+
+      background: transparent;
+      border: none;
+      border-radius: 0;
+
+      overflow: visible;
+    }
+
+    .org-logo {
+      display: block;
+
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
+      max-height: 100%;
+
+      object-fit: contain;
+      object-position: center;
+    }
+
+
+    /* Cambridge */
+
+    .logo-cambridge {
+      width: 210px;
+      max-height: 62px;
+    }
+
+
+    /* SJTU */
+
+    .logo-sjtu {
+      width: 195px;
+      max-height: 66px;
+
+      transform: scale(1.12);
+      transform-origin: center;
+    }
+
+
+    /* CV4DT */
+
+    .logo-cv4dt {
+      width: 92px;
+      max-height: 62px;
+
+      transform: translateY(-20px) scale(1.08);
+      transform-origin: center;
+    }
+
+    @media (max-width: 760px) {
+      .four-video-grid {
+        width: 920px !important;
+        max-width: none !important;
+      }
+      .four-video-grid > .video-panel {
+        flex: 0 0 221px !important;
+        width: 221px !important;
+        max-width: 221px !important;
+      }
+      #method .method-figure {
+        width: 100% !important;
+      }
+    }
+  </style>
+  <img class="org-logo logo-cambridge">
+  <img class="org-logo logo-sjtu">
+  <img class="org-logo logo-cv4dt">
 </head>
 <body>
   <header class="site-header">
@@ -29,40 +193,36 @@
 
   <main id="top">
     <section class="hero section-pad">
-      <div class="hero-grid page-width">
-        <div class="hero-copy">
-          <div class="eyebrow">ARXIV · 2026</div>
-          <h1><span class="accent">PhySPRING</span>: Structure-Preserving Reduction of Physics-Informed Twins via GNN</h1>
-          <p class="dek">A differentiable GNN framework that learns reduced spring–mass digital twins while preserving explicit physical structure for efficient simulation and downstream robot evaluation.</p>
+      <div class="page-width hero-single">
+        <div class="eyebrow">NeurIPS 2026 · Poster</div>
+        <h1><span class="accent">PhySPRING</span>: Structure-Preserving Reduction of Physics-Informed Twins via GNN</h1>
+        <p class="dek">A differentiable GNN framework that learns reduced spring–mass digital twins while preserving explicit physical structure for efficient simulation and downstream robot evaluation.</p>
 
-          <div class="authors" aria-label="Authors">
-            <span>Yixiong Jing<sup>*†</sup></span>
-            <span>Xingyuan Chen<sup>*</sup></span>
-            <span>Guangming Wang<sup>†</sup></span>
-            <span>Olaf Wysocki</span>
-            <span>Haibing Wu</span>
-            <span>Brian Sheil</span>
-          </div>
-          <div class="affiliations">
-            <span>University of Cambridge</span>
-            <span>Shanghai Jiao Tong University</span>
-          </div>
-          <div class="footnote">* Equal contribution &nbsp;&nbsp; † Corresponding author</div>
+        <div class="authors" aria-label="Authors">
+          <span>Yixiong Jing<sup>*</sup></span>
+          <span>Xingyuan Chen<sup>*</sup></span>
+          <span>Guangming Wang<sup>†</sup></span>
+          <span>Olaf Wysocki</span>
+          <span>Haibing Wu</span>
+          <span>Brian Sheil</span>
+        </div>
+        <div class="affiliations">
+          <span>University of Cambridge</span>
+          <span>Shanghai Jiao Tong University</span>
+          <span>CV4DT Lab</span>
+        </div>
+        <div class="footnote">* Equal contribution &nbsp;&nbsp; † Corresponding author: Guangming Wang</div>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">Paper</a>
-            <a class="btn btn-secondary" href="https://arxiv.org/pdf/2605.07687" target="_blank" rel="noreferrer">PDF</a>
-            <span class="btn btn-disabled" aria-disabled="true" title="Code link will be added later">Code · Coming soon</span>
-          </div>
+        <div class="logo-row" aria-label="Affiliation and lab logos">
+          <div class="org-logo logo-cambridge"><img src="assets\figs\Cambridge.jpg" alt="University of Cambridge logo" class="org-logo" /></div>
+          <div class="org-logo logo-sjtu"><img src="assets\figs\sjtu_logo.png" alt="Shanghai Jiao Tong University logo" class="org-logo" /></div>
+          <div class="org-logo logo-cv4dt"><img src="assets\figs\CV4DTlogo.png" alt="CV4DT logo placeholder" class="org-logo" /></div>
         </div>
 
-        <div class="hero-media media-placeholder tall" role="img" aria-label="Placeholder for PhySPRING teaser video or image">
-          <div class="placeholder-topline">TEASER · PLACEHOLDER</div>
-          <div class="spring-illustration" aria-hidden="true">
-            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div>
-            <div class="edge e1"></div><div class="edge e2"></div><div class="edge e3"></div><div class="edge e4"></div><div class="edge e5"></div>
-          </div>
-          <div class="placeholder-caption">Replace with the paper teaser image or a looping result video.</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">Paper</a>
+          <a class="btn btn-secondary" href="https://arxiv.org/pdf/2605.07687" target="_blank" rel="noreferrer">PDF</a>
+          <span class="btn btn-disabled" aria-disabled="true">Code · Coming soon</span>
         </div>
       </div>
     </section>
@@ -83,36 +243,15 @@
           <p>From dense reconstruction to simulation-ready reduced-order models.</p>
         </div>
 
-        <div class="wide-media media-placeholder" role="img" aria-label="Placeholder for PhySPRING method figure">
-          <div class="placeholder-topline">FIGURE · METHOD PLACEHOLDER</div>
-          <div class="pipeline">
-            <div class="pipe-card"><b>Dense Twin</b><span>spring–mass graph</span></div>
-            <div class="arrow">→</div>
-            <div class="pipe-card"><b>Neural-CLASP</b><span>learn assignments</span></div>
-            <div class="arrow">→</div>
-            <div class="pipe-card"><b>Galerkin</b><span>preserve structure</span></div>
-            <div class="arrow">→</div>
-            <div class="pipe-card"><b>Reduced Twin</b><span>simulation-ready</span></div>
-          </div>
-          <div class="placeholder-caption">Replace with Fig. 2 or your final method overview export.</div>
-        </div>
+        <figure class="research-figure method-figure">
+          <img src="assets/figs/methodology.png" alt="PhySPRING architecture showing hierarchical Neural-CLASP graph coarsening, Galerkin reduction, decoder reconstruction, and forward dynamics." />
+          <figcaption><strong>PhySPRING architecture.</strong> The framework progressively coarsens the input spring-mass graph with Neural-CLASP, preserves physical structure through Galerkin reduction, reconstructs multi-resolution states with hierarchical decoders, and evaluates reduced models through forward dynamics.</figcaption>
+        </figure>
 
         <div class="feature-grid three">
-          <article class="feature-card">
-            <div class="feature-tag">A · TOPOLOGY</div>
-            <h3>Learned graph coarsening</h3>
-            <p>A hierarchical GNN learns discrete node assignments from geometric, topological, and dynamic features.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-tag">B · PHYSICS</div>
-            <h3>Explicit physical form</h3>
-            <p>Galerkin projection carries the system matrices across scales so each reduced model remains a spring–mass system.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-tag">C · OPTIMIZATION</div>
-            <h3>Observation-supervised</h3>
-            <p>Topology and mechanical parameters are trained through differentiable forward rollouts against observed motion.</p>
-          </article>
+          <article class="feature-card"><div class="feature-tag">A · TOPOLOGY</div><h3>Learned graph coarsening</h3><p>A hierarchical GNN learns discrete node assignments from geometric, topological, and dynamic features.</p></article>
+          <article class="feature-card"><div class="feature-tag">B · PHYSICS</div><h3>Explicit physical form</h3><p>Galerkin projection carries the system matrices across scales so each reduced model remains a spring–mass system.</p></article>
+          <article class="feature-card"><div class="feature-tag">C · OPTIMIZATION</div><h3>Observation-supervised</h3><p>Topology and mechanical parameters are trained through differentiable forward rollouts against observed motion.</p></article>
         </div>
       </div>
     </section>
@@ -131,17 +270,38 @@
           <div class="stat"><strong>Explicit</strong><span>spring–mass structure at every level</span></div>
         </div>
 
-        <div class="comparison-grid">
-          <div class="media-placeholder dark-placeholder" role="img" aria-label="Placeholder for reconstruction comparison">
-            <div class="placeholder-topline">QUALITATIVE RESULT · PLACEHOLDER</div>
-            <div class="ghost-bars"><span></span><span></span><span></span><span></span></div>
-            <div class="placeholder-caption">Insert reconstruction and re-simulation comparison.</div>
+        <div class="phystwin-block">
+          <div class="phystwin-heading">
+            <div><div class="result-kicker">PhysTwin optimization</div><h3>Reconstruction, re-simulation, and future prediction</h3></div>
+            <p>Each object is shown with four synchronized videos so the observation, PhysTwin baseline, SPRING-Dense, and SPRING-Sparse can be compared directly over time.</p>
           </div>
-          <div class="media-placeholder dark-placeholder" role="img" aria-label="Placeholder for prediction comparison">
-            <div class="placeholder-topline">PREDICTION RESULT · PLACEHOLDER</div>
-            <div class="ghost-bars"><span></span><span></span><span></span><span></span></div>
-            <div class="placeholder-caption">Insert multi-level prediction visualization or video.</div>
-          </div>
+
+
+          <section class="object-video-group" aria-labelledby="object-a-title">
+            <div class="object-video-title"><span class="object-index">Object 01</span><h4 id="object-a-title">Rope</h4></div>
+            <div class="four-video-scroll">
+              <div class="four-video-grid">
+                <article class="video-panel"><div class="video-title"><strong>Observation</strong><span>Reference</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/rope_observation.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>PhysTwin</strong><span>Baseline</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/rope_phystwin.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>SPRING-Dense</strong><span>Ours</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/rope_dense.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>SPRING-Sparse</strong><span>Ours</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/rope_sparse.mp4" type="video/mp4" /></video></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="object-video-group" aria-labelledby="object-b-title">
+            <div class="object-video-title"><span class="object-index">Object 02</span><h4 id="object-b-title">Sloth</h4></div>
+            <div class="four-video-scroll">
+              <div class="four-video-grid">
+                <article class="video-panel"><div class="video-title"><strong>Observation</strong><span>Reference</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/sloth_observation.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>PhysTwin</strong><span>Baseline</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/sloth_phystwin.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>SPRING-Dense</strong><span>Ours</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/sloth_dense.mp4" type="video/mp4" /></video></article>
+                <article class="video-panel"><div class="video-title"><strong>SPRING-Sparse</strong><span>Ours</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/sloth_sparse.mp4" type="video/mp4" /></video></article>
+              </div>
+            </div>
+          </section>
+
+          
         </div>
       </div>
     </section>
@@ -150,21 +310,26 @@
       <div class="page-width">
         <div class="section-index">04 · REAL2SIM</div>
         <div class="section-title-row">
-          <h2>Reduced twins stay useful inside the robot loop</h2>
-          <p>The learned reduced models can be substituted into downstream robot policy evaluation without retraining the policies.</p>
+          <h2>Robot manipulation across four reduction levels</h2>
+          <p>Visualize the same grasping task with Level-0 through Level-3 reduced twins to compare task-level behavior as the physical model becomes progressively coarser.</p>
         </div>
 
-        <div class="robot-grid">
-          <div class="media-placeholder robot-placeholder" role="img" aria-label="Placeholder for Real2Sim robot evaluation video">
-            <div class="placeholder-topline">ROBOT VIDEO · PLACEHOLDER</div>
-            <div class="robot-arm" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="placeholder-caption">Replace with ACT / π₀ manipulation evaluation clips.</div>
+
+        <div class="four-video-scroll real2sim-video-row" aria-label="Real2Sim videos across model levels">
+          <div class="four-video-grid">
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-0</strong><span>Full-resolution twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl0_0.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-1</strong><span>Reduced twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl1_0.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-2</strong><span>Further-reduced twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl2_0.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-3</strong><span>Most compact twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl3_0.mp4" type="video/mp4" /></video></article>
           </div>
-          <div class="robot-copy">
-            <h3>Zero-shot deployment of the reduced physical model</h3>
-            <p>PhySPRING preserves the mechanical representation needed by external simulators, so reduced twins can be used directly for unseen manipulations and repeated action rollouts.</p>
-            <div class="mini-fact"><span>ACT &amp; π₀</span><p>Policy evaluation across reduction levels</p></div>
-            <div class="mini-fact"><span>1.23×</span><p>up to action-sampling throughput improvement reported in the paper</p></div>
+        </div>
+
+        <div class="four-video-scroll real2sim-video-row" aria-label="Real2Sim videos across model levels">
+          <div class="four-video-grid">
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-0</strong><span>Full-resolution twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl0_1.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-1</strong><span>Reduced twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl1_1.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-2</strong><span>Further-reduced twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl2_1.mp4" type="video/mp4" /></video></article>
+            <article class="video-panel light-panel"><div class="video-title"><strong>Level-3</strong><span>Most compact twin</span></div><video controls muted loop playsinline preload="auto"><source src="assets/videos/real2sim_rope_lvl3_1.mp4" type="video/mp4" /></video></article>
           </div>
         </div>
       </div>
@@ -183,13 +348,12 @@
         <div class="section-index">06 · CITATION</div>
         <h2>How to cite</h2>
         <div class="citation-box">
-<pre id="bibtex">@misc{jing2026physpring,
-  title  = {PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN},
-  author = {Yixiong Jing and Xingyuan Chen and Guangming Wang and Olaf Wysocki and Haibing Wu and Brian Sheil},
-  year   = {2026},
-  eprint = {2605.07687},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.RO}
+<pre id="bibtex">@article{jing2026physpring,
+  title   = {PhySPRING: Structure-Preserving Reduction of Physics-Informed Twins via GNN},
+  author  = {Yixiong Jing and Xingyuan Chen and Guangming Wang and Olaf Wysocki and Haibing Wu and Brian Sheil},
+  journal = {arXiv preprint arXiv:2605.07687},
+  year    = {2026},
+  note    = {NeurIPS 2026 Poster}
 }</pre>
           <button id="copyBib" class="copy-btn" type="button">Copy BibTeX</button>
         </div>
@@ -200,10 +364,7 @@
   <footer>
     <div class="page-width footer-inner">
       <div><strong>PhySPRING</strong><br><span>Structure-Preserving Reduction of Physics-Informed Twins via GNN</span></div>
-      <div class="footer-links">
-        <a href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">arXiv</a>
-        <span>Code coming soon</span>
-      </div>
+      <div class="footer-links"><a href="https://arxiv.org/abs/2605.07687" target="_blank" rel="noreferrer">arXiv</a><span>Code coming soon</span></div>
     </div>
   </footer>
 
